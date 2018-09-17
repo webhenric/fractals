@@ -1,0 +1,135 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Fractal viewer'
+  ClientHeight = 808
+  ClientWidth = 1115
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  GlassFrame.Enabled = True
+  GlassFrame.Left = 2
+  GlassFrame.Top = 2
+  GlassFrame.Right = 2
+  GlassFrame.Bottom = 2
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image1: TImage
+    Left = 0
+    Top = 0
+    Width = 872
+    Height = 808
+    Align = alClient
+    ExplicitLeft = 360
+    ExplicitTop = 264
+    ExplicitWidth = 105
+    ExplicitHeight = 105
+  end
+  object RzPanel1: TRzPanel
+    Left = 872
+    Top = 0
+    Width = 243
+    Height = 808
+    Align = alRight
+    TabOrder = 0
+    object RzProgressBar1: TRzProgressBar
+      Left = 2
+      Top = 704
+      Width = 239
+      Height = 40
+      Align = alBottom
+      BarStyle = bsGradient
+      BorderWidth = 0
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      InteriorOffset = 0
+      ParentFont = False
+      PartsComplete = 0
+      Percent = 0
+      TotalParts = 0
+    end
+    object RzRadioGrp1: TRzRadioGroup
+      Left = 2
+      Top = 2
+      Width = 239
+      Height = 71
+      Align = alTop
+      Caption = 'Type of fractal to render'
+      CaptionFont.Charset = DEFAULT_CHARSET
+      CaptionFont.Color = clWindowText
+      CaptionFont.Height = -12
+      CaptionFont.Name = 'Tahoma'
+      CaptionFont.Style = [fsBold]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      GroupStyle = gsStandard
+      ItemHeight = 20
+      ItemIndex = 0
+      Items.Strings = (
+        'Mandelbrot set')
+      ParentFont = False
+      SpaceEvenly = True
+      TabOrder = 0
+      VerticalSpacing = 6
+      VisualStyle = vsGradient
+    end
+    object RzSpinEdit1: TRzSpinEdit
+      Left = 2
+      Top = 73
+      Width = 239
+      Height = 24
+      Hint = 'Iteration count'
+      AllowKeyEdit = True
+      Max = 1000.000000000000000000
+      Min = 1.000000000000000000
+      Value = 50.000000000000000000
+      Align = alTop
+      Color = clBtnFace
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object RzButton1: TRzButton
+      Left = 2
+      Top = 744
+      Width = 239
+      Height = 62
+      Align = alBottom
+      Caption = 'Paint'
+      DoubleBuffered = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -27
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentDoubleBuffered = False
+      ParentFont = False
+      TabOrder = 2
+      OnClick = RzButton1Click
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 160
+    Top = 65528
+  end
+end
